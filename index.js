@@ -2,7 +2,6 @@ const mineflayer = require("../mineflayer-bedrock-public");
 
 const username = 'Bot'
 const server = '192.168.0.47'
-const batchingInterval = 50
 
 let options = {
     version: 'bedrock_1.21.50',
@@ -13,9 +12,8 @@ let options = {
     port: 20050,
     offline: true,
     username: username,
-    batchingInterval: batchingInterval,
     logging: true,
-    physicsEnabled: true
+    physicsEnabled: false
 }
 
 const bot = mineflayer.createBot(options)
@@ -28,4 +26,3 @@ bot._client.on('text', (packet) => { // Listen for chat messages from the server
       })
     }
   })
-
